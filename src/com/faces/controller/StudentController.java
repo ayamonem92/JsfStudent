@@ -107,7 +107,8 @@ public class StudentController {
 		
 		return "students?faces-redirect=true";		
 	}
-	public void deleteStudent(int studentID) throws Exception{
+	public String deleteStudent(int studentID) throws Exception{
 		studentDao.deleteStudent(studentID);
+		return "students?faces-redirect=true";
 	}
 }

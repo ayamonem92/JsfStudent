@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,26 +24,25 @@
 	</div>
 	
 	<div id="container">
-		<h3>Update Student</h3>
+		<h3>Add Student</h3>
 
-		<h:messages globalOnly="true" />
+		<p:messages globalOnly="true" />
 
-		<h:form id="form" style="margin-top: 10px;" >
-			<h:panelGrid columns="3">
+		<h:form id="form" style="margin-top: 10px;" title="Add Student">
 			
-				<h:outputLabel>First name:</h:outputLabel> <h:inputText value="#{student.firstName}" id="firstName" /> <h:message for="firstName" />
+				<p:outputLabel>First name:</p:outputLabel> <p:inputText value="#{student.firstName}" id="firstName" /> <p:message for="firstName" />
 	
-				<h:outputLabel>Last name:</h:outputLabel> <h:inputText value="#{student.lastName}" id="lastName" /> <h:message for="lastName" />
+				<p:outputLabel>Last name:</p:outputLabel> <p:inputText value="#{student.lastName}" id="lastName" /> <p:message for="lastName" />
 	
-				<h:outputLabel>Email:</h:outputLabel> <h:inputText value="#{student.email}" id="email" 
+				<p:outputLabel>Email:</p:outputLabel> <p:inputText value="#{student.email}" id="email" 
 									required="true"
-            							requiredMessage="Your email is mandatory."/> 	<h:message for="email"  />
+            							requiredMessage="Your email is mandatory."/> 	<p:message for="email"  />
 				
 				
 				
-				 <h:commandButton value="Save" styleClass="save" action="#{studentController.addStudent(student)}"/>
+				 <p:commandButton value="Save" styleClass="save" action="#{studentController.addStudent(student)}"/>
 			
-			</h:panelGrid>
+			
 		</h:form>
 
 		<div style="clear: both;"></div>
